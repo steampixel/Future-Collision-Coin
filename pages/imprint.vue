@@ -6,11 +6,11 @@
 
         <app-nav/>
 
-        <half-height class="highlight-gray">
+        <half-height class="highlight-gray d-flex align-items-center">
 
-             <div class="hero-text">
-               <h1>Imprint</h1>
-             </div>
+           <div class="container hero-text">
+             <h1>Imprint</h1>
+           </div>
 
         </half-height>
 

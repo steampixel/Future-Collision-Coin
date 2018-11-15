@@ -8,12 +8,16 @@
       {{currentCheckKey}}
     </div>
 
-    <div v-if="step=='done'" class="alert alert-danger">
-      Sorry! No collisions were found :-( Come back in a few years, ask your grandson,
-      buy more key packages or finally make a donation on <a href="https://www.betterplace.org" target="_blank">betterplace.org</a>.
+    <div v-if="step=='done'">
+      Sorry! No collisions were found :-( Come back in a few years, ask your grandson to do so,
+      buy more key packages or finally make a donation to
+      <a target="_blank" href="https://www.welthungerhilfe.org/donate/">Welthungerhilfe</a>,
+      <a href="https://www.betterplace.org" target="_blank">betterplace.org</a>,
+      <a target="_blank" href="https://act.greenpeace.org/page/33188/donate/">Greenpeace</a> or
+      <a href="https://my.seashepherd.org/donate" target="_blank">Sea Shepherd</a>.
     </div>
 
-    <div v-if="step=='fileError'" class="alert alert-danger">
+    <div v-if="step=='fileError'">
       Sorry! The file format is not supported or the file is corrupt. Please try another package.
     </div>
 
@@ -73,6 +77,7 @@
 
             // Just display the address
             component.currentCheckKey = component.lines[component.ticks]
+
             // Do not check the address because it makes no difference if we check it or not
 
             // Init next tick

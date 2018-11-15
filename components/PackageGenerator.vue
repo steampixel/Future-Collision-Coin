@@ -1,9 +1,13 @@
 <template>
   <div>
 
-    <div v-if="step<3">
-      <input type="range" min="1000" max="1000000" step="1000" v-model="packageSize"><br/>
-      Generate {{packageSize}} FCCs for {{totalPrice}}$
+    <div v-if="step==0">
+      <p>Here you can generate your FCC's. Use the slider to define your package size and price:</p>
+    </div>
+
+    <div v-if="step<5">
+      <input type="range" min="1000" max="1000000" step="1000" v-model="packageSize">
+      <p>Generate {{packageSize}} FCC's for {{totalPrice}}</p>
     </div>
 
     <div v-if="step==0">
@@ -11,39 +15,70 @@
     </div>
 
     <div v-if="step==1">
-      <div class="alert alert-danger">
-        Are you Sure? Colliding crypto addresses are very rare. The investment in possibly existing private future keys carries a high risk. You may loose your entire investment.
-        Please read the <a href="/disclaimer">disclaimer</a>. You should consider to donate your {{totalPrice}}$ instead to one of the great projects on
-        <a target="_blank" href="https://www.betterplace.org">betterplace.org</a>.
-      </div>
-      <div class="btn-group" role="group">
-        <a target="_blank" href="https://www.betterplace.org" class="btn btn-success">Donate on betterplace.org</a>
-        <button class="btn btn-danger" @click="step = 2">I understand the risk! Generate my {{packageSize}} keys for {{totalPrice}}$</button>
+      <p>
+          Please confirm: Are you sure? Colliding crypto addresses are very rare! The investment in possibly existing private future keys carries a high risk!
+          You may loose your entire investment. Please read the <a href="#disclaimer">disclaimer</a>.
+          You should consider to donate your {{totalPrice}} instead to one of the great projects on
+          <a target="_blank" href="https://www.betterplace.org">betterplace.org</a>.
+      </p>
+      <div role="group">
+        <a target="_blank" href="https://www.betterplace.org" class="btn btn-success">Donate {{totalPrice}} to betterplace.org</a>
+        <button class="btn btn-danger" @click="step = 2">I understand the risk! Generate my {{packageSize}} keys for {{totalPrice}}</button>
       </div>
     </div>
 
     <div v-if="step==2">
-      <div class="alert alert-danger">
-        The truth is we dont't want your money. We will generate your keys for free.
-        But you should seriously consider making a donation to a <a href="https://www.betterplace.org" target="_blank">betterplace.org</a> project instead of making uncertain investments.
-      </div>
-      <div class="btn-group" role="group">
-        <a target="_blank" href="https://www.betterplace.org" class="btn btn-success">Donate on betterplace.org</a>
-        <button class="btn btn-danger" @click="generate()">Stop it! Generate my {{packageSize}} keys for {{totalPrice}}$ now!</button>
+      <p>
+        Did you know that Bitcoin transactions use a lot of electricity and massively drive climate change?
+        It would therefore make more sense to donate your money to an organization like
+        <a target="_blank" href="https://act.greenpeace.org/page/33188/donate/">Greenpeace</a> or
+        <a href="https://my.seashepherd.org/donate" target="_blank">Sea Shepherd</a> which work for the environment, nature and the climate.
+      </p>
+      <div role="group">
+        <a target="_blank" href="https://act.greenpeace.org/page/33188/donate/" class="btn btn-success">Donate {{totalPrice}} to Greenpeace</a>
+        <a target="_blank" href="https://my.seashepherd.org/donate" class="btn btn-success">Donate {{totalPrice}} to Sea Shepherd</a>
+        <button class="btn btn-danger" @click="step = 3">Got it! Generate my {{packageSize}} keys for {{totalPrice}} now!</button>
       </div>
     </div>
 
     <div v-if="step==3">
-      Generating...
-      {{lastGeneratedBitcoinKeys}}
-      {{generatedBitcoinKeysCount}} / {{packageSize}} keys generated
-      <button class="btn btn-primary" @click="stop=true">Stop! Thats enough</button>
+      <p>
+        Also, be aware that cryptocurrencies will further enhance the distinction between poor and rich people, as redistribution in democratic systems is not possible.
+        It would be better to invest in organizations like <a target="_blank" href="https://www.welthungerhilfe.org/donate/">Welthungerhilfe</a> that defend against ever-increasing poverty.
+      </p>
+      <div role="group">
+        <a target="_blank" href="https://www.welthungerhilfe.org/donate/" class="btn btn-success">Donate {{totalPrice}} to Welthungerhilfe</a>
+        <button class="btn btn-danger" @click="step = 4">Puh! OK! Generate my {{packageSize}} keys for {{totalPrice}} now!</button>
+      </div>
     </div>
 
     <div v-if="step==4">
-      Your data is ready for download. {{generatedBitcoinKeysCount}} keys generated.
-      <div class="btn-group" role="group">
-        <button class="btn btn-success" @click="downloadData()">Download your package for free</button>
+      <p>
+        The truth is we dont't want your money. We will generate your keys for free.
+        But you should seriously consider making a donation instead.
+      </p>
+      <div role="group">
+        <button class="btn btn-danger" @click="generate()">Stop it! Generate my {{packageSize}} keys for {{totalPrice}} now!</button>
+      </div>
+    </div>
+
+    <div v-if="step==5">
+      <p>
+        Generating your keys ...
+        {{lastGeneratedBitcoinKeys}}
+        {{generatedBitcoinKeysCount}} / {{packageSize}} keys generated
+      </p>
+      <button class="btn btn-primary" @click="stop=true">Stop! That are enough keys</button>
+    </div>
+
+    <div v-if="step==6">
+      <p>
+        Your data is ready for download. {{generatedBitcoinKeysCount}} keys generated.
+        After you have downloaded the data you can check it periodically.
+      </p>
+      <div role="group">
+        <button class="btn btn-success" @click="downloadData()">Download your FCC package for free</button>
+        <a class="btn btn-danger" href="#monitor">Check your FCC's now</a>
         <button class="btn btn-primary" @click="step=0">Generate a new package</button>
       </div>
     </div>
@@ -64,10 +99,10 @@
     },
     computed: {
       totalPrice: function () {
-        if(this.step>1){
-          return 0;
+        if(this.step<4){
+          return (this.packageSize / 10000)+'$'
         }
-        return this.packageSize / 10000
+        return 'free'
       },
       generatedBitcoinKeysCount: function () {
         return this.generatedBitcoinKeys.length
@@ -86,7 +121,7 @@
     methods:{
       generate: function(){
         this.generatedBitcoinKeys = [];
-        this.step=3
+        this.step=5
         this.stop=false
         var component = this
 
@@ -106,10 +141,10 @@
             if(!component.stop){
               setTimeout(nextTick, 0);
             }else{
-              component.step=4
+              component.step=6
             }
           }else{
-            component.step=4
+            component.step=6
           }
         }
 

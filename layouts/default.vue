@@ -21,6 +21,10 @@
     font-weight: bold;
   }
 
+  .disclaimer {
+    font-size:0.8rem;
+  }
+
   @media screen and (max-width : 700px){
     body {
       font-size: 1.5rem;
@@ -44,6 +48,7 @@
   /* Links */
   a {
     color: #000;
+    text-decoration: underline;
   }
 
   a:hover {
@@ -58,6 +63,20 @@
   nav a:hover {
     color: #fff;
   }
+
+  /* Buttons */
+  .btn {
+    border-radius: 0;
+  }
+
+  a.btn {
+    text-decoration: none;
+  }
+
+  /* Make button group breakable */
+  /* .btn-group {
+    display: flex;
+  } */
 
   /* Spaces */
   .text-spacing{
@@ -75,11 +94,6 @@
     position: relative;
   }
 
-  .background-filter{
-    background-color: rgba(0,0,0,.6);
-    height:100%;
-  }
-
   .full-hight-image {
     background-position: center;
     background-repeat: no-repeat;
@@ -90,10 +104,6 @@
   /* hero text */
   .hero-text {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
   }
 
@@ -138,7 +148,5 @@
   .highlight-gray{
     background-color: #111;
   }
-
-
 
 </style>

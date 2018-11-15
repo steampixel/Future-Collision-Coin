@@ -1,5 +1,5 @@
 <template>
-  <div class="half-height" v-bind:style="{ 'height': elementHeight }">
+  <div class="half-height">
     <slot></slot>
   </div>
 </template>
@@ -7,33 +7,33 @@
 <script>
 
   export default {
-    data: function(){
-      return {
-        elementHeight: '50vh',
-        oldInnerWidth: 0,
-        oldInnerHeight: 0
-      };
-    },
-    mounted: function () {
-      // Add resize event
-      window.addEventListener('resize', this.handleResize)
-      this.handleResize();
-    },
-    beforeDestroy: function () {
-      // Remove resize event
-      window.removeEventListener('resize', this.handleResize)
-    },
-    methods:{
-      handleResize: function(){
-        // Only resize the height if the height and the width of the screen has changed.
-        // Only if the width and height has changed the screen orientation has changed.
-        if(window.innerWidth!==this.oldInnerWidth&&window.innerHeight!==this.oldInnerHeight){
-          this.oldInnerWidth = window.innerWidth;
-          this.oldInnerHeight = window.innerHeight;
-          this.elementHeight = (window.innerHeight/2)+'px';
-        }
-      }
-    }
+    // data: function(){
+    //   return {
+    //     elementHeight: '50vh',
+    //     oldInnerWidth: 0,
+    //     oldInnerHeight: 0
+    //   };
+    // },
+    // mounted: function () {
+    //   // Add resize event
+    //   window.addEventListener('resize', this.handleResize)
+    //   this.handleResize();
+    // },
+    // beforeDestroy: function () {
+    //   // Remove resize event
+    //   window.removeEventListener('resize', this.handleResize)
+    // },
+    // methods:{
+    //   handleResize: function(){
+    //     // Only resize the height if the height and the width of the screen has changed.
+    //     // Only if the width and height has changed the screen orientation has changed.
+    //     if(window.innerWidth!==this.oldInnerWidth&&window.innerHeight!==this.oldInnerHeight){
+    //       this.oldInnerWidth = window.innerWidth;
+    //       this.oldInnerHeight = window.innerHeight;
+    //       this.elementHeight = (window.innerHeight/2)+'px';
+    //     }
+    //   }
+    // }
 
   }
 
@@ -43,8 +43,16 @@
 <style>
 
   .half-height{
-    height:50vh;/* noscript fallback */
-    position: relative;
+    padding-top:50px;
+    padding-bottom:50px;
+    min-height:50vh;
   }
+
+  /* @media screen and (min-width : 600px){
+    .half-height{
+      height:50vh !important;
+      position: relative;
+    }
+  } */
 
 </style>

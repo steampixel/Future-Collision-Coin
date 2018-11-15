@@ -6,7 +6,7 @@
                   Future Collision Coin
               </a>
           </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="/img/blurred-image-1.jpg">
+          <!-- <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="/img/blurred-image-1.jpg">
             <ul class="navbar-nav  ml-auto">
 
 
@@ -14,13 +14,6 @@
                 <a class="nav-link" href="/">
                   <i class="now-ui-icons design_app"></i>
                   <span>Home</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="/disclaimer">
-                  <i class="now-ui-icons design_app"></i>
-                  <span>Disclaimer</span>
                 </a>
               </li>
 
@@ -39,7 +32,7 @@
               </li>
 
               </ul>
-          </div>
+          </div> -->
       </div>
   </nav>
 </template>

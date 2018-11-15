@@ -6,11 +6,11 @@
 
         <app-nav/>
 
-        <half-height class="highlight-gray">
+        <half-height class="highlight-gray d-flex align-items-center">
 
-             <div class="hero-text">
+           <div class="container hero-text">
                <h1>Privacy Policy</h1>
-             </div>
+           </div>
 
         </half-height>
 
