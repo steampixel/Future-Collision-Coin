@@ -4,16 +4,16 @@
 
       <header>
 
-        <app-nav/>
+        <!-- <app-nav/> -->
 
         <full-height class="cover-image d-flex align-items-center" style="background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/images/bitcoin-3083578_1920.jpg');">
            <div class="container hero-text">
-             <h1>Future Collision Coin</h1>
+             <h1>FCC Future Collision Coin</h1>
              <h2>You don't have to trade <strong>Bitcoin</strong> to become super rich</h2>
              <div>
-               <a class="btn btn-success" href="#generator">Generate your FCC's now</a>
-               <a class="btn btn-danger" href="#monitor">Check your FCC's now</a>
-               <a class="btn btn-primary" href="#docs_1">Who we are?</a>
+               <a class="btn btn-success" href="#generator">Generate FCC's</a>
+               <a class="btn btn-danger" href="#monitor">Check FCC's</a>
+               <a class="btn btn-primary" href="#docs_1">What is this?</a>
              </div>
            </div>
         </full-height>
@@ -27,7 +27,7 @@
               <full-height class="d-flex align-items-center">
                 <div class="row">
                   <div class="col-sm">
-                    <h2>Who we are?</h2>
+                    <h2>What is this and who we are?</h2>
                     <p>
                       We are a young and dynamic startup from Würzburg, Germany.
                       We want to change the world of finance in a sustainable way by using <strong>blockchain and cryptocurrencies</strong>.
@@ -36,7 +36,7 @@
                     </p>
                     <div>
                       <a class="btn btn-primary" href="#docs_2">How does it work?</a>
-                      <a class="btn btn-success" href="#generator">Generate your keys now</a>
+                      <a class="btn btn-success" href="#generator">Generate FCC's now</a>
                     </div>
                   </div>
                 </div>
@@ -54,12 +54,12 @@
                       Crypto currencies like Bitcoin uses cryptographic keys to ensure nobody can take the money. But the keys are limited.
                       The more wallets are generated, the higher the likelihood that one of the keys already exists. This case is called a <strong>cryptographic collision</strong>.
                       This is where Future Collision Coin (FCC) comes into play:
-                      This is a payed service, that will generate <strong>thousands of private Bitcoin keys</strong> for you. From time to time you can verify the collision success.
-                      If a existing Bitcoin key was found you can simply take the money.
+                      This is a paid service, that will generate packages containing <strong>thousands of private Bitcoin keys</strong> (FCC's) for you.
+                      Simply download and store the packages in a safe place. Maybe one of the FCC's will contain funds in the future.
                     </p>
                     <div>
-                      <a class="btn btn-primary" href="#docs_3">Are the keys unique?</a>
-                      <a class="btn btn-success" href="#generator">Generate your keys now</a>
+                      <a class="btn btn-primary" href="#docs_3">Will I be informed?</a>
+                      <a class="btn btn-success" href="#generator">Generate FCC's now</a>
                     </div>
                   </div>
                 </div>
@@ -72,13 +72,55 @@
               <full-height class="d-flex align-items-center">
                 <div class="row">
                   <div class="col-sm">
+                    <h2>Will I be informed?</h2>
+                    <p>
+                      How to recognize if a FFC contain funds?
+                      We will not store any packages for you. This is not safe enough.
+                      But you can return from time to time, upload your key packages and verify the collision status of the addresses.
+                      If one of the FCC's contain funds you will get an alert and the party can start.
+                    </p>
+                    <div>
+                      <a class="btn btn-primary" href="#docs_4">Are the keys unique?</a>
+                      <a class="btn btn-success" href="#generator">Generate FCC's now</a>
+                    </div>
+                  </div>
+                </div>
+              </full-height>
+            </div>
+        </section>
+
+        <section class="highlight highlight-gray" id="docs_4">
+            <div class="container">
+              <full-height class="d-flex align-items-center">
+                <div class="row">
+                  <div class="col-sm">
                     <h2>Are the keys unique?</h2>
                     <p>
-                      Yes! Absolutely! We have created a <strong>super hight performance</strong> algorithm that ensures that every key will only be generated once and never again!
-                      Due to this fact we can provide you high quality private key packages.
-                      Every key generated by this service is <strong>absolutly unique</strong> and will never be delivered to other users again.
+                      Yes! Absolutely! We have created a <strong>super high performance</strong> algorithm that ensures that every key will
+                      only be generated once and never again!
+                      Due to this fact, we can provide you high quality private key packages.
+                      Every key generated by this service is <strong>absolutely unique</strong> and will never be delivered to other users again.
                     </p>
-                    <a class="btn btn-success" href="#generator">Generate your package now</a>
+                    <a class="btn btn-primary" href="#docs_5">Is it illegal?</a>
+                    <a class="btn btn-success" href="#generator">Generate FCC's now</a>
+                  </div>
+                </div>
+              </full-height>
+            </div>
+        </section>
+
+        <section id="docs_5">
+            <div class="container">
+              <full-height class="d-flex align-items-center">
+                <div class="row">
+                  <div class="col-sm">
+                    <h2>This sounds suspicious! Is it illegal?</h2>
+                    <p class="supersize">
+                      NO!
+                    </p>
+                    <div>
+                      <a class="btn btn-success" href="#generator">Generate FCC's now</a>
+                    </div>
                   </div>
                 </div>
               </full-height>
@@ -91,7 +133,7 @@
                 <div class="row">
                   <div class="col">
 
-                    <h2>Generate and download your FCC key package</h2>
+                    <h2>Generate and download your FCC package</h2>
                     <package-generator></package-generator>
 
                   </div>
@@ -105,10 +147,10 @@
               <full-height class="d-flex align-items-center">
                 <div class="row">
                   <div class="col">
-                    <h2>Upload your FCC key package and find collisions</h2>
+                    <h2>Upload FCC package and find collisions</h2>
                     <package-monitor></package-monitor>
                     <div>
-                      <a class="btn btn-success" href="#generator">Generate a new FCC package</a>
+                      <a class="btn btn-success" href="#generator">Generate new FCC package</a>
                     </div>
                   </div>
                 </div>
@@ -124,12 +166,12 @@
                     <h2>Disclaimer</h2>
                     <p class="disclaimer">
                       Colliding crypto addresses are very rare! The investment in possibly existing private future keys (FCC's) carries a high risk.
-                      You may loose your entire investment.
+                      You may lose your entire investment.
                     </p>
                     <p class="disclaimer">
                       Never use the generated keys for real transactions! This service will generate real private Bitcoin keys.
-                      But the cryptographic random source for the generator is not very trustworthy.
-                      It is made for speed and not for security. Furthermore the generation of keys in the browser is not save as they could get grabbed through
+                      But the cryptographic random source of the generator is not very trustworthy.
+                      It is made for speed and not for security. Furthermore the generation of keys in the browser is not very safe as they could get grabbed through
                       malware or other attacks. So never use the generated keys for real transactions!
                     </p>
                     <p class="disclaimer">
@@ -138,9 +180,17 @@
                       Furthermore the collision is so unlikely that it would be more likely that the check function contains an error.
                       Therefore, we decided to leave it empty. That's safer and will lead to the same result.
                     </p>
+                    <p class="disclaimer">
+                      As you suspected, the generated keys are not necessarily unique, as collisions can occur in the future.
+                      This means that even your FCC's can get stolen through this service. Crap! What a scam! Yes you are right!
+                      But cryptocurrencies cause big problems. So donate now before it's too late: <a target="_blank" href="https://www.welthungerhilfe.org/donate/">Welthungerhilfe</a>,
+                      <a href="https://www.betterplace.org" target="_blank">betterplace.org</a>,
+                      <a target="_blank" href="https://support.worldwildlife.org/site/SPageServer?pagename=main_monthly">WWF</a>,
+                      <a href="https://my.seashepherd.org/donate" target="_blank">Sea Shepherd</a>
+                    </p>
                     <div>
-                      <a class="btn btn-success" href="#generator">Generate your FCC's now</a>
-                      <a class="btn btn-danger" href="#monitor">Check your FCC's now</a>
+                      <a class="btn btn-success" href="#generator">Generate FCC's now</a>
+                      <a class="btn btn-danger" href="#monitor">Check FCC's now</a>
                     </div>
                   </div>
                 </div>

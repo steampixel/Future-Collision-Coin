@@ -9,40 +9,33 @@
   /* Fonts */
   body {
     color: #000;
-    font-size: 2rem;
   }
 
   h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
+    margin-bottom:25px;
   }
 
-  h2{
-    font-size: 2rem;
-    font-weight: bold;
+  p {
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width : 900px){
+    h1, h2, h3, h4, h5, h6{
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .supersize {
+    font-size: 10rem;
   }
 
   .disclaimer {
     font-size:0.8rem;
-  }
-
-  @media screen and (max-width : 700px){
-    body {
-      font-size: 1.5rem;
-    }
-
-    h2{
-      font-size: 1.5rem;
-    }
-  }
-
-  @media screen and (max-width : 400px){
-    body {
-      font-size: 1rem;
-    }
-
-    h2{
-      font-size: 1rem;
-    }
   }
 
   /* Links */
@@ -67,24 +60,33 @@
   /* Buttons */
   .btn {
     border-radius: 0;
+    width:100%;
+    margin-bottom:5px;
+    white-space: normal;
   }
 
   a.btn {
     text-decoration: none;
   }
 
-  /* Make button group breakable */
-  /* .btn-group {
-    display: flex;
-  } */
+  @media screen and (min-width : 500px){
+    .btn{
+      width:auto;
+    }
+  }
+
+  /* hideoverflow */
+  .break {
+    word-break: break-all;
+  }
 
   /* Spaces */
-  .text-spacing{
+  /* .text-spacing{
     padding-top:50px;
   }
   .text-spacing > p, .text-spacing > ul{
     margin-bottom: 50px;
-  }
+  } */
 
   /* hero image */
   .cover-image {
@@ -108,28 +110,20 @@
   }
 
   .hero-text h1{
-    font-size: 5rem;
+    font-size: 3rem;
   }
 
   .hero-text h2{
     font-weight: normal;
+    font-size: 1rem;
   }
 
-  @media screen and (max-width : 650px){
+  @media screen and (min-width : 900px){
     .hero-text h1{
-      font-size: 3rem;
+      font-size: 5rem;
     }
     .hero-text h2{
-      font-size: 1rem;
-    }
-  }
-
-  @media screen and (max-width : 360px){
-    .hero-text h1{
       font-size: 2rem;
-    }
-    .hero-text h2{
-      font-size: 0.7rem;
     }
   }
 
