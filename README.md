@@ -1,6 +1,6 @@
-# website
-
-> Nuxt.js project
+# Future Colision Coin Website
+Cryptocurrencies causes a lot of problems as they are mostly driven by greed.
+This is some kind of an art project showing the main problems.
 
 ## Build Setup
 
@@ -21,3 +21,5 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
+## License
+MIT
