@@ -3,10 +3,10 @@
 
     <!-- <dropzone id="foo" ref="el" :options="options" :destroyDropzone="true" @vdropzone-file-added="loadFile"></dropzone> -->
 
-    <div class="upload-btn-wrapper" v-if="step!='check'">
-      <button class="btn btn-primary">Upload and check FCC file</button>
+    <span class="upload-btn-wrapper" v-if="step!='check'">
+      <button class="btn btn-danger">Upload and check FCC file</button>
       <input class="btn" type="file" @change="loadFile">
-    </div>
+    </span>
 
     <p v-if="step=='check'">Checking {{ticks}} / {{linesCount}}</p>
     <p v-if="step=='check'" class="break">{{currentCheckKey}}</p>
@@ -88,7 +88,7 @@
             // Just display the address
             component.currentCheckKey = component.lines[component.ticks]
 
-            // Do not check the address because it makes no difference if we check it or not
+            // Do not really check the address because it makes no difference if we check it or not
 
             // Init next tick
             component.ticks++;

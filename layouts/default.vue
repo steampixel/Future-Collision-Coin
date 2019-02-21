@@ -88,6 +88,17 @@
     margin-bottom: 50px;
   } */
 
+  /* Spacing */
+  .has-margin-bottom-1 {
+    margin-bottom:1rem;
+  }
+  .has-margin-bottom-2 {
+    margin-bottom:2rem;
+  }
+  .has-margin-bottom-4 {
+    margin-bottom:4rem;
+  }
+
   /* hero image */
   .cover-image {
     background-position: center;
@@ -141,6 +152,13 @@
 
   .highlight-gray{
     background-color: #111;
+  }
+
+  /*
+    smooth scrolling
+  */
+  html {
+    scroll-behavior: smooth;
   }
 
 </style>

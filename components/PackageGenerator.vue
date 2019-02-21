@@ -11,11 +11,11 @@
     </div>
 
     <div v-if="step==0">
-      <button class="btn btn-primary" @click="step = 1">Generate now</button>
+      <button class="btn btn-success" @click="step = 1">Generate now</button>
     </div>
 
     <div v-if="step==1">
-      <p>
+      <p class="">
           Please confirm: Are you sure? Colliding crypto addresses are very rare! The investment in possibly existing private future keys carries a high risk!
           You may lose your entire investment. Please read the <a href="#disclaimer">disclaimer</a>.
           You should consider donating your {{totalPrice}} instead to one of the great projects on
@@ -69,7 +69,7 @@
       <p>
         {{generatedBitcoinKeysCount}} / {{packageSize}} FCC's generated
       </p>
-      <button class="btn btn-primary" @click="stop=true">Stop! That are enough keys</button>
+      <button class="btn btn-primary" @click="stop=true;downloadData()">Stop! That are enough keys</button>
       <p class="break">
         <span v-for="(item, index) in lastGeneratedBitcoinKeys" v-bind:key="index">
           {{ item }}
@@ -83,9 +83,9 @@
         After you have downloaded the data you can check it periodically.
       </p>
       <div role="group">
-        <button class="btn btn-success" @click="downloadData()">Download your FCC package for free</button>
+        <button class="btn btn-primary" @click="downloadData()">Download your FCC package</button>
         <a class="btn btn-danger" href="#monitor">Check your FCC's now</a>
-        <button class="btn btn-primary" @click="step=0">Generate a new package</button>
+        <button class="btn btn-success" @click="step=0">Generate a new package</button>
       </div>
     </div>
 
