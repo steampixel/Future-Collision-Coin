@@ -27,7 +27,7 @@
               <full-height class="d-flex align-items-center">
                 <div class="row">
                   <div class="col-sm">
-                    <h2>Our storry is your success!</h2>
+                    <h2>Our story is your success!</h2>
                     <p>
                       We are a young and dynamic startup from Würzburg, Germany.
                       We want to change the world of Bitcoin finance in a sustainable way by using <strong>blockchain and cryptocurrencies</strong>.
