@@ -7,7 +7,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Wanderer.ai will leverage chatbot context to the next level by storing and executing its artificial intellicenge (AI) inside a logic graph.' }
+      { name: 'og:image', content: 'images/bitcoin-3083578_1920.jpg' },
+      { hid: 'description', name: 'description', content: 'You dont have to trade Bitcoin to become super rich! We are a young and dynamic startup from Würzburg, Germany. We want to change the world of Bitcoin finance in a sustainable way by using blockchain and cryptocurrencies. We will generate future income from which even your grandchildren will benefit.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
